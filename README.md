@@ -19,5 +19,12 @@ Each round, a number (1-8) is picked out of the pot. That pick is the team draft
 Total Tickets: 36
 
 
-## Getting Started
+## Example
 
+pot: [8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
+
+Randomly generated pick is 7
+
+new pot: [8, 8, 8, 8, 8, 8, 8, 8, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
+
+and so on... until there are no numbers left
