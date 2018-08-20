@@ -1,0 +1,36 @@
+{
+    "standings": [
+        {
+            "player": "Will",
+            "standing": 1
+        },
+        {
+            "player": "Kyle",
+            "standing": 2
+        },
+        {
+            "player": "Scott",
+            "standing": 3
+        },
+        {
+            "player": "Dane",
+            "standing": 4
+        },
+        {
+            "player": "Jason",
+            "standing": 5
+        },
+        {
+            "player": "Jeremy",
+            "standing": 6
+        },
+        {
+            "player": "Dano",
+            "standing": 7
+        },
+        {
+            "player": "Carter",
+            "standing": 8
+        }
+    ]
+}
