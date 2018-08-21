@@ -22,6 +22,7 @@ function getDraftOrder(userList) {
     let draftOrder = [];
 
     for (var i = picksRemaining; i > 0; i--) {
+        ticketList = shuffle(ticketList);
         let pick = makePick(ticketList);
         draftOrder.push(pick);
         picksRemaining--;
@@ -32,7 +33,21 @@ function getDraftOrder(userList) {
 }
 
 function makePick(ticketArray) {
-    return ticketArray[Math.floor(Math.random() * ticketArray.length)]
+    let index = Math.floor(Math.random() * ticketArray.length);
+    return ticketArray[index];
+}
+
+function shuffle(array) {
+    var m = array.length, t, i;
+
+    while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+    }
+
+    return array;
 }
 
 run();
