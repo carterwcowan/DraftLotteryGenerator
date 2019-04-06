@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Draft Lottery Generator
+This project is to generate a fantasy sport draft order, based on a lottery system.
 
-## Available Scripts
+## How it works
+A lottery pot is created with 8 teams in the lottery. Teams are given the number of tickets that correspond to their number (e.g. Team 6 gets 6 tickets)
 
-In the project directory, you can run:
+Each round, a number (1-8) is picked out of the pot. That pick is the team drafting in that position. After a number is pulled, the remaining instances of that number are also removed from the pot.
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 1st - 8 tickets - 22.22% chance at first pick
+- 2nd - 7 tickets - 19.44% chance at first pick
+- 3rd - 6 tickets - 16.67% chance at first pick
+- 4th - 5 tickets - 13.89% chance at first pick
+- 5th - 4 tickets - 11.11% chance at first pick
+- 6th - 3 tickets - 8.33% chance at first pick
+- 7th - 2 tickets - 5.56% chance at first pick
+- 8th - 1 ticket - 2.78% chance at first pick
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Total Tickets: 36
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Example
 
-### `npm run build`
+pot: [8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Randomly generated pick is 7
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+new pot: [8, 8, 8, 8, 8, 8, 8, 8, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+and so on... until there are no numbers left
